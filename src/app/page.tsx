@@ -1,6 +1,5 @@
 import Review from "./components/reviews";
 import { GridBackgroundDemo } from "./components/grid";
-import Navbar from "./components/navbar";
 import { IoArrowForwardOutline } from "react-icons/io5";
 
 export default function Home() {

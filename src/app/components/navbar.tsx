@@ -1,5 +1,4 @@
-import Link from "next/link";
-import Navlink from "../components/navlink.tsx"
+import Navlink from "./navlink"
  
 async function Navbar() {
   return (
