@@ -36,7 +36,8 @@ function Dashboard() {
         />
       </div>
       <div className="flex flex-row p-5 gap-4">
-       {data.map( (item)=><Box
+       {data.map( (item,index)=><Box
+       key={index}
           number={item.number}
           heading={item.heading}
           content={item.content}
