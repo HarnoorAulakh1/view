@@ -6,7 +6,7 @@ async function Navbar() {
       <div className="flex flex-row justify-between w-[80%] px-2 rounded-xl bg-transparent bg-opacity-50 backdrop-blur-md p-2">
         <div className="flex flex-row justify-center rounded-xl items-center gap-4 font-extralight text-sm">
           <Navlink href="/" value="View" />
-          <Navlink href="/pricing" value="Pricing" />
+          <Navlink href="/console" value="Pricing" />
           <Navlink href="/blogs" value="blogs" />
           <Navlink href="/contact" value="contact" />
         </div>
