@@ -1,9 +1,8 @@
 "use client";
-import img from "/Users/harnoorsinghaulakh/Desktop/Projects/view/src/public/img.webp";
+import img from "../../public/img.webp";
 import Card from "./card";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useMotionValueEvent } from "framer-motion";
-import { useRef } from "react";
 const data = [
   {
     image: img,
