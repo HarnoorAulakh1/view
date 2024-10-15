@@ -41,7 +41,7 @@ function Signup({
     });
     if (response.status == 200) alert("Account created successfully");
     else alert(JSON.stringify(await response.json()));
-    e.target.reset();
+    form.reset();
   }
   return (
     <div className="w-[60%] rounded-md p-10 bg-white h-max">
@@ -148,7 +148,7 @@ function Login({
     const res = await response.json();
     console.log(response.status);
     if (response.status==200) {
-      show(`Logged in as ${res.username}`, "success");
+      //show(`Logged in as ${res.username}`, "success");
       dispatch(res);
       router.push("/console/dashboard");
       console.log(`Logged in as ${res.username}`);
@@ -156,7 +156,7 @@ function Login({
     else{
       alert(res);
     }
-    e.target.reset();
+    form.reset();
   }
   return (
     
