@@ -1,10 +1,13 @@
 import Review from "./components/reviews";
 import { GridBackgroundDemo } from "./components/grid";
 import { IoArrowForwardOutline } from "react-icons/io5";
+import Navbar from "./components/navbar";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <div className="">
+      <Navbar />
       <GridBackgroundDemo>
         <div className="w-full h-[100%] flex flex-col justify-center items-center gap-4">
           <p className="text-[6rem] text-[#ffffff] text-center w-[80%] font-bold leading-none">
@@ -21,17 +24,18 @@ export default function Home() {
                 Get started
               </button>
             </div>
-            <button className="hover:bg-[#222222] group text-white px-5 py-2 flex items-center justify-center gap-2 rounded-3xl transition ease-linear duration-150">
-              Contact us
-              <div className="group-hover:translate-x-2 transition ease-linear duration-150">
-                <IoArrowForwardOutline />
-              </div>
-            </button>
+            <Link href="/contact">
+              <button className="hover:bg-[#222222] group text-white px-5 py-2 flex items-center justify-center gap-2 rounded-3xl transition ease-linear duration-150">
+                Contact us
+                <div className="group-hover:translate-x-2 transition ease-linear duration-150">
+                  <IoArrowForwardOutline />
+                </div>
+              </button>
+            </Link>
           </div>
         </div>
       </GridBackgroundDemo>
-      <Review/>
-        
+      <Review />
     </div>
   );
 }

@@ -13,11 +13,11 @@ html {
 input{
   background-color: #171717;
   border-radius:.5rem;
+  border:2px solid rgb(0, 0, 0);
 }
 input:focus{
   outline: none;
-  border:2px;
-  border:#a19f9f solid;
+  border:2px solid rgb(146, 146, 146);
 }
 
 
