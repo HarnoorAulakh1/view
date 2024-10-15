@@ -15,12 +15,12 @@ function Navbar() {
         </div>
 
         <div className="flex flex-row justify-center items-center gap-2 rounded-xl">
-          <Link href="/auth/login">
+          <Link href="/auth">
             <button className="hover:bg-[#222222] px-4 py-2 rounded-3xl transition ease-linear duration-150">
               Login
             </button>
           </Link>
-          <Link href="/auth/signup">
+          <Link href="/auth">
             <div className="bg-[#6b6b6b] rounded-[1rem] py-[0.05rem] flex justify-center items-center">
               <button className="hover:bg-[#000000e6] bg-[#171717] px-3 py-1 rounded-[2.2rem] transition ease-linear duration-150">
                 Sign Up
