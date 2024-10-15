@@ -1,9 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import { cookies } from "next/headers";
-import { log } from "console";
-
-// 1. Specify protected and public routes
-
 
 export default async function middleware(req: NextRequest) {
   const token = req.cookies.get("token");

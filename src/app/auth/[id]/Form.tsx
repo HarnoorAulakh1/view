@@ -1,8 +1,7 @@
 "use client";
-import Link from "next/link";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
-import { useNotify } from "reactjs-notify-toast";
+//import { useNotify } from "reactjs-notify-toast";
 import { userContext } from "../../components/profile";
 
 export const revalidate=1;
@@ -127,13 +126,13 @@ function Login({
   setter: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
   const router = useRouter();
-  const { show } = useNotify();
+  //const { show } = useNotify();
   const { dispatch } = useContext(userContext);
   async function handle(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.target as HTMLFormElement;
     const data = new FormData(form);
-    const keys = data.keys();
+    //const keys = data.keys();
     const response = await fetch("https://seepbackend.onrender.com/user/login", {
       method: "POST",
       body: JSON.stringify({

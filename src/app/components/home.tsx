@@ -4,7 +4,7 @@ import { ReactNode } from "react";
 import Navbar from "./navbar";
 import Profile from "./profile";
 import { usePathname } from "next/navigation";
-import { FetchData } from "view-analytics";
+//import { FetchData } from "view-analytics";
 
 export default function Home({ children }: { children: ReactNode }) {
   const path = usePathname();
