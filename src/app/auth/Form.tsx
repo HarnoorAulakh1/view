@@ -24,7 +24,7 @@ function Signup({
     e.preventDefault();
     const form = e.target as HTMLFormElement;
     const data = new FormData(form);
-    const response = await fetch("api/user/register", {
+    const response = await fetch("/user/register", {
       method: "POST",
       body: JSON.stringify({
         username: data.get("username"),
@@ -133,7 +133,7 @@ function Login({
     const form = e.target as HTMLFormElement;
     const data = new FormData(form);
     //const keys = data.keys();
-    const response = await fetch("api/user/login", {
+    const response = await fetch("/user/login", {
       method: "POST",
       body: JSON.stringify({
         username: data.get("username"),
@@ -149,7 +149,7 @@ function Login({
     if (response.status==200) {
       //show(`Logged in as ${res.username}`, "success");
       dispatch(res);
-      router.push("api/console/dashboard");
+      router.push("/console/dashboard");
       console.log(`Logged in as ${res.username}`);
     }
     else{

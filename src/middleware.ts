@@ -9,7 +9,7 @@ export default async function middleware(req: NextRequest) {
     return NextResponse.redirect(new URL("/auth", req.url));
   }
   const response = await fetch(
-    "api/user/checkLogin",
+    "/user/checkLogin",
     {
       method: "GET",
       headers: {

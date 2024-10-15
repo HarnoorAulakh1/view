@@ -56,7 +56,7 @@ export default function Profile({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     const fetchUser = async () => {
-      const data = await fetch(`api/user/checklogin`, {
+      const data = await fetch(`/user/checklogin`, {
         method: "GET",
         credentials: "include",
       });
