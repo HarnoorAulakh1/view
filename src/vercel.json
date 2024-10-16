@@ -1,9 +1,0 @@
-{
-    "rewrites": [
-      {
-        "source": "/:path*",
-        "destination": "https://seepbackend.onrender.com/:path*"
-      }
-    ]
-  }
-  

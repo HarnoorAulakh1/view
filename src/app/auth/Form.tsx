@@ -24,8 +24,9 @@ function Signup({
     e.preventDefault();
     const form = e.target as HTMLFormElement;
     const data = new FormData(form);
-    const response = await fetch("/user/register", {
+    const response = await fetch("https://seepbackend.onrender.com/user/register", {
       method: "POST",
+      mode: "cors",
       body: JSON.stringify({
         username: data.get("username"),
         password: data.get("password"),
@@ -133,8 +134,9 @@ function Login({
     const form = e.target as HTMLFormElement;
     const data = new FormData(form);
     //const keys = data.keys();
-    const response = await fetch("/user/login", {
+    const response = await fetch("https://seepbackend.onrender.com/user/login", {
       method: "POST",
+      mode: "cors",
       body: JSON.stringify({
         username: data.get("username"),
         password: data.get("password"),

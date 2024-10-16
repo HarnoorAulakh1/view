@@ -9,9 +9,10 @@ export default async function middleware(req: NextRequest) {
     return NextResponse.redirect(new URL("/auth", req.url));
   }
   const response = await fetch(
-    "/user/checkLogin",
+    "https://seepbackend.onrender.com/user/checkLogin",
     {
       method: "GET",
+      mode: "cors",
       headers: {
         Authorization: JSON.stringify(token),
       },
