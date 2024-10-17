@@ -20,7 +20,7 @@ function Box({
   useEffect(() => {
     if (type == "new_signups") set(analytics.new_signups);
     else if (type == "live_users") set(analytics.live_users);
-    else if(analytics.total_users!=undefined) set(analytics.total_users.length);
+    else if(analytics.total_users!=undefined) set(Object.keys(analytics.total_users).length);
   }, [type,analytics]);
   return (
     <div className="border-[1px] border-[#e2e2e2] p-5 rounded-xl flex flex-col gap-12 w-[22rem]">

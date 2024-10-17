@@ -5,20 +5,20 @@ export const analyticsContext = createContext<{
   analytics: {
     live_users: number;
     new_signups: number;
-    total_users: number[];
+    total_users: object;
   };
   dispatch: React.Dispatch<
     React.SetStateAction<{
       live_users: number;
       new_signups: number;
-      total_users: number[];
+      total_users: object;
     }>
   >;
 }>({
   analytics: {
     live_users: 0,
     new_signups: 0,
-    total_users: [],
+    total_users: {},
   },
   dispatch: () => {},
 });
@@ -27,7 +27,7 @@ function AnalyticsWrapper({ children }: { children: React.ReactNode }) {
     const [analytics, setter] = useState<{
         live_users: number;
         new_signups: number;
-        total_users: number[];
+        total_users: object;
     }>({
         live_users: 0,
         new_signups: 0,
