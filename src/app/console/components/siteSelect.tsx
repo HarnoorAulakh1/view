@@ -12,8 +12,9 @@ function Select() {
   }
   useEffect(() => {
     const response = async () => {
-      const data = await fetch("http://localhost:4000/user/getSites", {
+      const data = await fetch("/api/user/getSites", {
         method: "POST",
+        mode: "cors",
         body: JSON.stringify({
           owner: user.username,
         }),

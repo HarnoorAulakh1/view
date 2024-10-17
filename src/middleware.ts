@@ -1,4 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
+// import  { createProxyMiddleware } from "http-proxy-middleware";
+
 
 export default async function middleware(req: NextRequest) {
   const token = req.cookies.get("token");
@@ -19,6 +21,7 @@ export default async function middleware(req: NextRequest) {
       credentials: "include",
     }
   );
+  console.log(response.status);
   if (response.status == 200) {
     return NextResponse.next();
   }
@@ -28,3 +31,4 @@ export default async function middleware(req: NextRequest) {
 export const config = {
   matcher: "/console/:path*",
 };
+

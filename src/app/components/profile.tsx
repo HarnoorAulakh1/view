@@ -56,9 +56,12 @@ export default function Profile({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     const fetchUser = async () => {
-      const data = await fetch(`https://seepbackend.onrender.com/user/checklogin`, {
+      const data = await fetch(`/api/user/checklogin`, {
         method: "GET",
         mode: "cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
         credentials: "include",
       });
       dispatch(await data.json());
