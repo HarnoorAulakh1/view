@@ -10,6 +10,17 @@ html {
   height: 100%;
 }
 
+.fade {
+  -webkit-mask-image: linear-gradient(transparent,#454444);
+  mask-image: linear-gradient(transparent, #454444);
+}
+
+.fade1 {
+  height: 50rem;
+  -webkit-mask-image: linear-gradient(transparent,#ffffff,transparent);
+  mask-image: linear-gradient(transparent,#ffffff,transparent);
+}
+
 input{
   background-color: #171717;
   border-radius:.5rem;
