@@ -1,5 +1,4 @@
 "use client";
-import { div } from "framer-motion/client";
 import img from "../../public/img.webp";
 import Card from "./card";
 import { motion } from "framer-motion";
